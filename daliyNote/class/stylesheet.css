@@ -28,6 +28,12 @@ section{
 li{
     display: list-item;
     margin-bottom: 1rem;
+    font-size: 28px;
+}
+
+li >h4{
+    font-size: 28px;
+
 }
 
 h3{
