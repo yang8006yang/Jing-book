@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20221005</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../HOMEPAGE.html">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="container">
+
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#display">Display</a></li>
+                    <li><a href="#position">Position</a></li>
+                    <li><a href="#flexbox">FlexBox</a></li>
+                    <li><a href="#pseudo">Pseudo</a></li>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <section>
+            
+            <h3 id="display">Display</h3>
+            <hr>
+            <ul>
+                <li>block</li>
+                <p>具width/height 概念，可設padding/margin，元素由上至下</p>
+                <li>inline</li>
+                <p>不具width/height 概念，不可設margin，可設vertical-align，元素同一列顯示</p>
+                <li>inline-block</li>
+                <p>具width/height 概念，可設padding/marginn，元素同一列顯示，可利用父元素text_align，會有一點空格</p>
+                <li>table-cell</li>
+                <li>none</li>
+            </ul>
+            <h3 id="position">Position</h3>
+            <hr>
+            <ul>
+                <li>static</li>
+                <p>預設值</p>
+                <li>absoulte</li>
+                <p>絕對定位: 以有座標/relative的<mark>父元素</mark>為基準(沒有就一直往上找)，利用top/right/left/buttom:數值 定位</p>
+                <li>relative</li>
+                <p>相對定位: 已<mark>原本顯示位置</mark>為基準來移動。主要用來幫absoulte當基準 或 希望區塊重疊時使用</p>
+                <li>fixed</li>
+                <p>固定配置: 拉卷軸滾動他都在同一個位置</p>
+                <li>sticky</li>
+                <p>黏住: 滾到某個位置就黏住不往下動了</p>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="flexbox">Flexbox</h3>
+            <hr>
+            <div style="border: 2px solid rgb(111, 199, 207);
+            width: 80%;
+            height:500px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;">
+                <p style="width: 100%;text-align: center;">
+                    
+                    container : display: flex;、align-items(直向位置):、justify-content(橫向位置)、flex-wrap
+                </p>
+                <div
+                style="border: 2px solid rgb(0, 234, 255);width: 100px;height: 100px;margin-right: 20px;text-align: center;">
+                item1</div>
+                <div
+                style="border: 2px solid rgb(0, 234, 255);width: 100px;height: 100px;flex-basis: 300px;text-align: center;">
+                flex-basis(看主軸row-or-column)</div>
+                <div
+                style="border: 2px solid rgb(0, 234, 255);width: 100px;height: 100px;margin-left: 20px;text-align: center;">
+                item3</div>
+                
+                
+                <p style="text-align: center;">
+                    p.s. align-content決定行之間的間隔，而align-items決定元素整體在容器的什麼位置。只有一行的時候align-content沒有任何效果。
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3 id="pseudo">Pseudo-elements/class</h3>
+            <hr>
+        </section>
+    </div>
+        <footer>
+                <a href="#">TOP</a>
+                <a href="../CSS/cssContents.html">BACK</a>
+        </footer>
+        <a href="#">
+            <div class="topcircle gotopP">
+            </div>
+            <div class="gotopP"><img src="/img/32213.png" alt="" class="gotoparrow"></div>
+        </a>
+    </body>
+    
+    </html>

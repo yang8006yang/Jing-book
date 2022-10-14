@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220921.28</title>
+    <style>
+        h6 {
+            color: brown;
+        }
+
+        p.dotted {
+            border-style: dotted;
+        }
+
+        p.dashed {
+            border-style: dashed;
+        }
+
+        p.solid {
+            border-style: solid;
+        }
+
+        p.double {
+            border-style: double;
+        }
+
+        p.groove {
+            border-style: groove;
+        }
+
+        p.ridge {
+            border-style: ridge;
+        }
+
+        p.inset {
+            border-style: inset;
+        }
+
+        p.outset {
+            border-style: outset;
+        }
+
+        p.none {
+            border-style: none;
+        }
+
+        p.hidden {
+            border-style: hidden;
+        }
+
+        p.mix {
+            border-style: dotted dashed solid double;
+        }
+
+        p.radius {
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../HOMEPAGE.html">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="container">
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#inline">CSS的位置</a></li>
+                    <li><a href="#selector">Selector</a></li>
+                    <li><a href="#background">Background</a></li>
+                    <li><a href="#border">Border</a></li>
+                    <li><a href="#boxsizing">Boxsizing</a></li>
+                    <li><a href="#forntsize">Font-size</a></li>
+                    <li><a href="#other">OtherStuff</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+
+                <h3 id="inline">CSS寫的位置</h3>
+                <hr>
+                <ul>
+                    <li>行內CSS inline scc
+
+                        <p style="color: rgb(19, 8, 121);">包在單行裡，在開頭tag後接style。 ex. tag style="color: aqua;</p>
+                    </li>
+                    <li>內部CSS internal
+                        <p style="color: darkred;">寫在html head tag裡面+style tag+{}</p>
+                    </li>
+                    <li>外部css external
+
+                        <p>
+                            透過外部CSS檔，在head用link tag連結<br>
+                            ex.link rel="stylesheet" href="./檔名.css"
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    <mark>inline>internal>externak(最近的優先)</mark>
+                </p>
+                <p style="color: gray;">加!important; 可無視權重 直接使用(危險!不建議使用)</p>
+            </section>
+            <section>
+
+                <h3 id="selector">選擇器</h3>
+                <hr>
+                <p>
+                <ul>
+                    <li>
+                        ID 選擇器:#
+                    </li>
+                    <li>
+                        CLASS 選擇器:.
+                    </li>
+                    <li>全部: *{}</li>
+                    <li>組合選擇器Combinators:
+                        <table border="1px" width="800px">
+                            <tr>
+                                <td>descendant selector (space)</td>
+                                <td>後代子元素全受影響</td>
+                                <td>ex.div p {
+                                    background-color: yellow;
+                                    }</td>
+                            </tr>
+                            <tr>
+                                <td>child selector (>)</td>
+                                <td>只有後代一層</td>
+                                <td>div > p {
+                                    background-color: yellow;
+                                    }</td>
+                            </tr>
+                            <tr>
+                                <td>adjacent sibling selector (+)</td>
+                                <td>同一層鄰近的</td>
+                            </tr>
+                            <tr>
+                                <td>general sibling selector (~)</td>
+                                <td>後面全部同一層的p</td>
+                                <td>div ~ p {
+                                    background-color: yellow;
+                                    }</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>屬性選擇器
+                        <table border="1px" width="800px">
+                            <tr>
+                                <td>E[href^="http"]{}</td>
+                                <td>選擇[href屬性質是以http開頭]的E元素</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+                </p>
+                <p><mark>
+                        *如果有從外面copy css，自己寫的放下面(會覆蓋)<br>
+                        * ID > Class (當重複時ID優先)
+                    </mark></p>
+            </section>
+            <section>
+                <h3 id="background">Background</h3>
+                <hr>
+                <ul>
+                    <li>background-color</li>
+                    <li>background-image
+                        <p>>>background-image: url("paper.gif");</p>
+                    </li>
+                    <li>background-repeat
+                        <p>>>background-repeat: repeat-x / y/ no-repeat;</p>
+                    </li>
+                    <li>background-position
+                        <p>>>ex. background-position: right top;</p>
+                        <div><a
+                                href="https://www.w3schools.com/cssref/playdemo.asp?filename=playcss_background-position">
+                                DEMO
+                            </a></div>
+                    </li>
+                    <li>background-attachment
+                        <p>>>background-attachment: fixed;<br>==fixed情況下背景圖固定不隨網頁滾動</p>
+                    </li>
+                    <li>background (shorthand property)
+                        <p>>>ex. background: #ffffff url("img_tree.png") no-repeat right top;</p>
+                    </li>
+                </ul>
+
+            </section>
+            <section>
+                <h3 id="border">Border</h3>
+                <hr>
+                <p class="dotted">A dotted border.</p>
+                <p class="dashed">A dashed border.</p>
+                <p class="solid">A solid border.</p>
+                <p class="double">A double border.</p>
+                <p class="groove">A groove border.</p>
+                <p class="ridge">A ridge border.</p>
+                <p class="inset">An inset border.</p>
+                <p class="outset">An outset border.</p>
+                <p class="none">No border.</p>
+                <p class="hidden">A hidden border.</p>
+                <p class="mix">A mixed border.</p>
+                <p class="radius">A ROUNDED border.</p>
+            </section>
+            <section>
+                <h3 id="boxsizing">Box-sizing</h3>
+                <hr>
+                <ul>
+                    <li>Border-box
+
+                        <p>
+                            <mark> border + padding +content</mark>= width
+                        </p>
+                    </li>
+                    <li>content-box(預設)
+
+                        <p>
+                            margin + border + padding + <mark>content(width)</mark>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="forntsize">Font-size</h3>
+                <hr>
+                <p style="font-size: 16px">一般HTML預設16px</p>
+                <p style="font-size: 1em">em=父元素*em數字</p>
+                <p style="font-size: 1.5rem">rem=根元素(HTML)*rem數字</p>
+                <p style="font-size: x-large">屬性名稱 固定倍數</p>
+            </section>
+            <section>
+                <h3 id="link">Link</h3>
+                <ul>
+                    <li>a:link - a normal, unvisited link</li>
+                    <li>a:visited - a link the user has visited</li>
+                    <li>a:hover - a link when the user mouses over it</li>
+                    <li>a:active - a link the moment it is clicked</li>
+                </ul>
+                <a href="">&lt</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="" style="font-size :1.5rem;">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">&gt</a>
+            </section>
+            <section>
+                <h3 id="other">OtherStuff</h3>
+                <hr>
+                <ul>
+                    <li>margin:0 auto >> 左右置中</li>
+                    <li>margin top與buttom >> 發生衝突(兩個區塊接再一起)會以大的為主</li>
+                    <li>overflow:scorll;/hidden;/ atuo;/</li>
+                    <p style="width: 200px; height: 200px; background-color:rgb(186, 144, 225); overflow: scroll;">Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Cum, corrupti officia quasi eaque laboriosam,
+                        praesentium ratione, at nemo alias sunt quia nulla explicabo quas placeat cumque distinctio ipsa
+                        nam! Corrupti veritatis dolor, porro voluptatem soluta alias aliquam atque doloremque natus
+                        incidunt
+                        voluptatibus aperiam perspiciatis. Quis expedita eum praesentium repellendus et qui earum
+                        doloremque
+                        debitis! Placeat illum beatae facere magnam neque, minus consequatur, animi, veritatis iusto vel
+                        quasi. Tenetur inventore quis eius architecto ipsam, voluptate accusantium sit enim facilis modi
+                    </p>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <a href="#">
+            <div class="topcircle gotopP">
+            </div>
+            <div class="gotopP"><img src="/img/32213.png" alt="" class="gotoparrow"></div>
+        </a>
+        <a href="#">TOP</a>
+        <a href="../CSS/cssContents.html">BACK</a>
+    </footer>
+</body>
+
+</html>

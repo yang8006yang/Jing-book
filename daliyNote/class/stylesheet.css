@@ -1,0 +1,166 @@
+*{
+    font-size: 24px;
+}
+.container{
+    display: flex;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin-top: 3rem; 
+}
+aside{
+    flex-basis: 20%;
+    
+    margin-right: 5rem;
+    margin-left: 3rem;
+    background-color: lightgray;
+    
+}
+section{
+    flex-basis: 70%;
+}
+
+li{
+    display: list-item;
+    margin-bottom: 1rem;
+}
+
+h3{
+    border-left: 2px solid black;
+    background-color: rgb(223, 242, 241);
+    padding: 1rem;
+    font-size: 32px;
+}
+
+a:visited{
+    color: black;
+}
+a{
+    color: black;
+}
+#nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding:0.6rem 1rem ;
+    margin-left: -1rem;
+    border-bottom: 2px outset rgb(0, 0, 0 ,0.2);
+    background-color: whitesmoke;
+}
+#header{
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 18rem;
+}
+#main{
+    float: left;
+    margin-left: 50px;
+    margin-top: 200px;
+}
+#footer{
+    clear: both;
+    text-align: center;
+}
+
+#line{
+    float: left;
+    margin-top: 60px;
+}
+.nav-left{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-left: 5rem;
+}
+.navlist{
+    float: right;
+    margin-right: 5rem;
+}
+.vl{
+    height:80vh;
+    width:.1vw;
+    border-width:0;
+    color:rgb(116, 111, 111);
+    background-color:rgba(167, 163, 163, 0.699);
+}
+.site-title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.frame{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.left{
+    flex: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    padding-right: 2rem;
+
+}
+
+.right{
+    flex: auto;
+    overflow: auto;
+}
+
+.displaytitle{
+    flex: none;
+    width: 99%;
+    justify-content: flex-start;
+    
+}
+.vline{
+    flex: none;
+    width: 1%;
+    justify-content: center;
+}
+
+
+.list{
+    /* background-color: lightgray; */
+    padding: 15px; 
+    margin-top: 4rem;
+    margin-bottom: 50px;
+    position: fixed;
+}
+.gotopP{position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+}
+.topcircle{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(155, 192, 186, 0.6);
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px gainsboro;
+}
+.gotoparrow{
+    width: 20px;
+    position: absolute;
+    right: 15px;
+    top: -35px;
+    opacity: 0.6;
+}
+footer{
+    margin: auto 0;
+    margin-top: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220921.22</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../HOMEPAGE.html">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="container">
+
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#link">Link&Absolute/Relative path</a></li>
+                    <li><a href="#formatting">Formatting</a></li>
+                    <li><a href="#img">Images</a></li>
+                    <li><a href="#table">Table</a></li>
+                    <li><a href="#other">OtherStuff</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h3 id="link">Link&Absolute/Relative path</h3>
+                <hr>
+                <!-- 超連結 -->
+                <ol>
+                    <li><b>link 網頁</b></li>
+                用a tag連結: a href="網址"
+                <a href="https://www.youtube.com/">youtube</a>
+                <br>
+                <li><b>link 網站</b></li>
+                *相對路徑:<br>
+                <i>
+                    是相對於現在目錄的路徑表示，換言之就是你現在這個檔案在哪裡，這個目錄的路徑起始點就在哪裡，所以每個檔案的相對路徑起始點都可能會不同。
+                </i>
+                <br><br>
+                <mark>用法:../上一層 ./同一層</mark>
+                <p>
+                    範例:
+                    page.html => 同層目錄中的 html 檔<br>
+                    ./css/all.css => 同層目錄中的 css 資料夾，裡面的 css 檔<br>
+                    ../img/logo.png => 上一層目錄中的 img 資料夾，裡面的圖檔
+                </p>
+                <br>
+                
+                *絕對路徑
+                <br>
+                <i>
+                    是一個絕對位置，不隨著檔案位置的變換而改變他的路徑。
+                    這個檔案在本機端或是網路上的絕對位置。
+                </i>
+                <p>
+                    範例:
+                    file:///c:/img/logo.png => 電腦C槽下的一張圖片<br>
+                    https://www.yahoo.com.tw/img/logo.png => 一個網址下的圖片<br>
+                    /img/logo.png => 根目錄下的一張圖片
+                </p>
+                <p>
+                        <mark>一般用相對路徑</mark>
+                    </p>
+                    *在新視窗開啟>> tag內+target="_blank"
+                    <br>
+                    <p>a href="網址" <mark>="_blank">more...</mark></p>
+                </ol>
+                <br>
+            </section>
+            <section>
+                <h3 id="formatting">Formatting</h3>
+                <hr>
+                <div>
+                    <ul>
+                        <li><p>一般文字</li>
+                            <li><b>粗體Bold text：</b>用 b tag/ strong tad(strong有語意，電腦知道他是強調的)</li>
+                            <li><i>斜體Italic text：</i>用: i tag</li>
+                            <li><mark>hightlight：</mark>用mark tag</li>
+                            <li><s>刪除線：</s>s tag / del(有語意)</li>
+                            <li><u>底線：</u>u tag / ins(有語意)</li>
+                            <li>
+                                <pre>
+                                    縮排:
+                                    pre tag
+                                </pre>
+                            </li>
+                    <li>This is <sup>superscripted</sup> text.</li>
+                    <li>This is <sub>subscripted</sub> text.</li>
+                    <li><q>引言</q></li>
+                    <li><blockquote cite="https://www.w3schools.com/html/html_formatting.asp">HTML contains several elements for defining text with a special meaning.</blockquote></li>
+                    <li><marquee>marquee tag跑馬燈 被淘汰了 很少人用 但瀏覽器可支援</marquee></li>
+                </ul>
+                <a href="https://www.w3schools.com/html/html_formatting.asp" target="_blank">more...</a>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h3 id="img">Images</h3>
+        <hr>
+        <img src="https://fakeimg.pl/250x100/ff0000/" alt="壞掉時替代文字">
+        <img src="https:/" alt="壞掉時替代文字">
+    </section>
+    <section>
+        <h3 id="table">Table</h3>
+        <hr>
+        <ul>
+            <li>table tag+ tr tag(table row)+ th(head)/td(date) tag
+                <br>*從橫向第一排開始
+            </li>
+            <li>合併格子：tag屬性+colspan(橫向)/rowspan(豎向)="格數"</li>
+            
+        </ul>
+    </section>
+    <section>
+        <h3 id="form">Form</h3>
+        <hr>
+        <ul>
+            <li>
+                使用form、input、label、select等tag 組成表單的介面
+            </li>
+            <il><img src="../img/0922 form.JPG"></il>
+            <li>
+                範例：<br>
+                <img src="../img/0922 form1.JPG" alt="圖片不見了"><br>
+                <img src="../img/0922form2.JPG" alt="圖片不見了">
+                <img src="../img/0922form3.JPG" alt="圖片不見了">
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h3 id="other">OtherStuff</h3>
+        <hr>
+        <ul>
+            <li>ul</li>
+            <li>ol</li>
+            *下一階層都要與li配合
+            <li>文字置中:(CSS)text-align: center; </li>
+        </ul>
+    </section>
+</main>
+</div>
+<footer>
+    <a href="#">
+        <div class="topcircle gotopP">
+        </div>
+        <div class="gotopP"><img src="/img/32213.png" alt="" class="gotoparrow"></div>
+    </a>
+        <a href="#">TOP</a>
+        <a href="../PHP/phpContents.html">BACK</a>
+    </footer>
+</body>
+</html>

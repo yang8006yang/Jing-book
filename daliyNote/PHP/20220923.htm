@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220921.22</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+    <div class="container">
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../HOMEPAGE.html">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <aside>
+        <div class="list">
+            <ul>
+                <li><a href="#page">動態/靜態網站</a></li>
+                <li><a href="#knowpage">認識動態網頁技術</a></li>
+                <li><a href="#xampp">XAMPP開發環境 安裝</a></li>
+                <li><a href="#varity">變數</a></li>
+                <li><a href="#operator">運算子</a></li>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <section>
+            <h3 id="page">動態/靜態 網站/頁</h3>
+            <hr>
+            <p>內容是否會隨時間/對象...不同改變(客戶端與伺服器是否會互動)</p>
+        </section>
+        <section>
+            <h3 id="knowpage">認識動態網頁技術</h3>
+            <hr>
+            <img src="../img/S__1900559.jpg" alt="圖片不見了" width="800px" />
+        </section>
+        <section>
+            <h3 id="xampp">XAMPP開發環境 安裝</h3>
+            <hr>
+            <p>xampp為一個整合型的網頁開發環境套件，裏頭已經先行整合了網頁常用的開發環境需要的設定和套件，包含了
+                **網頁伺服器(Apache)、資料庫(MySQL)、程式語言(PHP)、資料庫管理軟體(PhpMyAdmin)**</p>
+                <ol>
+                    <li>更換根目錄</li>
+                    <p>
+                        網站的開發一般是以專案為一個單位，反應在電腦中的具體呈現方式就是資料夾目錄，因此我們會習慣一個網站的內容都放在同一個資料夾來保存維護，如果要建立新的網站或新的專案，則會開啟另外的資料夾目錄來存放
+                    </p>
+                    <p>
+                        在xampp的控制台視窗 中，點選Apache項目後的config按鈕，在彈出選單中找到Apache(httpd.conf)項目：在文字內搜尋"documentroot"修改資料夾位置
+                    </p>
+                    <li>會預設開啟index.php>>可防止別人直接開啟其他檔案</li>
+                </ol>
+            </section>
+            <section>
+            <h3 id="varity">變數</h3>
+            <hr>
+            <script src="https://gist.github.com/bc5bbc6d58761d373c37faa44ed38a91.js"></script>
+        </section>
+        <section>
+            <h3 id="operator">運算子</h3>
+            <hr>
+            <p>
+                <ol>
+                    <li>一元運算子：!(將布林值反轉)、++、--</li>
+                    <li>二元運算子：</li>
+                    <ul>
+                        <li>算數:+、-、*、/、%、**</li>
+                        <li>指派運算子 - =、=></li>
+                        => 是給Array用 ex*
+                        ["A"=>"100"]<br>
+                        練習:交換變數
+                        
+                        ```
+                        $tmp=$a;
+                        $a=$b;
+                        $b=$tmp;
+                        
+                        <li>比較運算子 - ==、!=、>、<=< /li>
+                            <li>字串運算子 - .</li>
+                            <li>邏輯運算子 - &&、AND、||、OR、XOR</li>
+                        </ul>
+                        <li id="3o">三元運算子：? : - >>可以視為是判斷式if…else的簡寫法；</li>
+                        <script src="https://gist.github.com/ef2cb884b64c5ee0ecda47d8a69da836.js"></script>
+                    </ol>
+                </p>
+            </section>
+            <section>
+                <h3>流程控制</h3>
+                <hr>
+                <ul>
+                    <li><b>選擇結構</b></li><br>
+                    <ul>
+                        <li><u>if...else</u></li>
+                        <p>if判斷式:如果條件式為真則執行<br>
+                        </p>
+                        <script src="https://gist.github.com/yang8006yang/11ca405ed18ac2122ba05658fab05f94.js"></script>
+                        <li><u>switch…case</u></li>
+                        <p>switch的條件結果必須有明確的值=在多種選項中，執行符合條件式的選項</p>
+                        <script src="https://gist.github.com/yang8006yang/ff373af2c0d139feecd2abe59e003961.js"></script>
+                        <li><u><a href="#3o">三元運算子</a></u></li><br>
+                    </ul>
+                    <li><b>重複結構</b></li><br>
+                    <ul>
+                        <li><u>FOR LOOP</u></li>
+                        for(設變數起始值; 條件式為真時不斷執行; 增值/減值){<br>
+                            要重複執行的代碼<br>
+                        }<br><br>
+
+                        <li><u>While...</u></li>
+                        while(條件式){
+                            條件式為真時重複執行
+                        }<br>
+                        **do{
+                            
+                            //要重覆執行的程式
+                            
+                        }while(條件式);<br>
+                        *和while的不同在於do..while不論條件式是否成立都會至少執行一次<br><br>
+                        
+                        <li><u>Foreach</u></li>
+                        <script src="https://gist.github.com/yang8006yang/54a132614216c27517ba44922b01f0fa.js"></script>
+                    </ul>
+                    <li><b>巢狀結構</b></li><br>
+                    <p>=迴圈+判斷式疊加(一層套一層...)</p>
+                </ul>
+            </section>
+        </main>
+        </div>
+        <footer>
+            <a href="#">
+            <div class="topcircle gotopP">
+            </div>
+            <div class="gotopP"><img src="/img/32213.png" alt="" class="gotoparrow"></div>
+        </a>
+            <a href="#">TOP</a>
+            <a href="../PHP/phpContents.html">BACK</a>
+        </footer>
+    </body>
+    
+    </html>
