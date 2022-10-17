@@ -43,6 +43,11 @@ h3{
     font-size: 32px;
 }
 
+mark{
+    font-weight: bold;
+    font-size: 28px;
+}
+
 a:visited{
     color: black;
 }
