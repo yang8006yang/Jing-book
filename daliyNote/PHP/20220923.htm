@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20220921.22</title>
+    <title>PHP 20220921.22</title>
     <link rel="stylesheet" href="../class/stylesheet.css">
 </head>
 
@@ -13,7 +13,7 @@
     <div class="container">
         <nav id="nav">
             <div>
-                <a class="nav-left" href="./index.html">JING HAN</a>
+                <a class="nav-left" href="../index.html">JING HAN</a>
                 <span class="navlist">2022/09/21 ~ NOW </span>
             </div>
         </nav>
@@ -25,6 +25,8 @@
                 <li><a href="#xampp">XAMPP開發環境 安裝</a></li>
                 <li><a href="#varity">變數</a></li>
                 <li><a href="#operator">運算子</a></li>
+                <li><a href="#loop">流程控制</a></li>
+                <li><a href="#array">陣列</a></li>
             </ul>
         </div>
     </aside>
@@ -89,7 +91,7 @@
                 </p>
             </section>
             <section>
-                <h3>流程控制</h3>
+                <h3 id="loop">流程控制</h3>
                 <hr>
                 <ul>
                     <li><b>選擇結構</b></li><br>
@@ -126,6 +128,46 @@
                     </ul>
                     <li><b>巢狀結構</b></li><br>
                     <p>=迴圈+判斷式疊加(一層套一層...)</p>
+                </ul>
+            </section>
+            <section>
+                <h3 id="array">陣列</h3>
+                <ul>
+                    <li>空陣列宣告：</li>
+                    <p>$a=[];</p>
+                    <li>陣列宣告：</li>
+                    <pre>$a[key]=value;
+                    $a=[“A”,”B”,”C”]; (key從0開始)
+                    $a=[1=>”A”,2=>”B”,3=>”C”]; (指定key值)</pre>
+                    <li>取出陣列中的資料：</li>
+                    <pre>echo $a[key];</pre>
+                    <li>多維陣列：</li>
+                    <pre>$a=[
+                        [1,3,4,5],
+                        [2,22,5,88],
+                        [8,2]
+                      ];</pre>
+                    <li>常用函式：</li>
+                    <table border=2px style= "border-collapse: collapse;">
+                        <tr>
+                            <td>函式</td>
+                            <td>功能</td>
+                        </tr>
+                        <tr>
+                            <td>implode("字串/符號",$arr)</td>
+                            <td>以字串或符號把陣列轉為字串<br>
+                            ex. $arr=['Hello','World!'] >>implode(" ",$arr);>> Hello World!
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>join("字串/符號",$arr) ;</td>
+                            <td>以字串或符號把陣列轉為字串(可接受參數順序對調)</td>
+                        </tr>
+                        <tr>
+                            <td>array_keys()</td>
+                            <td>將key取出為一個陣列</td>
+                        </tr>>
+                    </table>
                 </ul>
             </section>
         </main>
