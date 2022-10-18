@@ -175,3 +175,6 @@ footer{
     margin-top: 1rem;
     text-align: center;
 }
+tr:nth-child(even){
+    background-color: rgb(235, 232, 232);
+}
