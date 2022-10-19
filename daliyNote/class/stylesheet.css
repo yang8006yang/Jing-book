@@ -1,5 +1,6 @@
 *{
     font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .container{
     display: flex;
@@ -15,7 +16,6 @@ main{
 }
 aside{
     flex-basis: 20%;
-    
     margin-right: 5rem;
     margin-left: 3rem;
     background-color: lightgray;
@@ -86,7 +86,7 @@ a{
     margin-top: 60px;
 }
 .nav-left{
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
     font-weight: bolder;
     text-decoration: none;
     margin-left: 5rem;
@@ -96,7 +96,7 @@ a{
     margin-right: 5rem;
 }
 .vl{
-    height:80vh;
+    height:85vh;
     width:.1vw;
     border-width:0;
     color:rgb(116, 111, 111);
@@ -149,7 +149,8 @@ a{
     padding: 15px; 
     margin-top: 4rem;
     margin-bottom: 50px;
-    position: fixed;
+    position: sticky;
+    top: 5rem;
 }
 .gotopP{position: fixed;
     right: 20px;
