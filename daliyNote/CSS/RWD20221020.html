@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 20221020</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../index.html"><img src="/daliyNote/img/logomy.png" alt="" class="logomy">JING
+                HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="container">
+
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#rwd">RWD</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h3 id="rwd">RWD</h3>
+                <hr>
+                <p style="font-size: 32px;">Responsive Web Design</p>
+                <p style="line-height: 0.2rem;">"content is like water" 內容像水一樣會跟著容器改變樣子</p>
+                <br>
+                <ul>
+                    <li>媒體類型</li>
+                    <p style="line-height: 0.2rem;">all、print、screen、speech</p>
+                    <br>
+                    <li>Media Queries</li>
+                    <p>可以根據不同的媒體、可視區域、解析度等套用不同的樣子</p>
+                    如下：使用link元素的media屬性設定為screen就套用
+                    <div style="color: rgb(239, 244, 245); background-color: grey; padding: 1rem;margin-bottom: 1rem;">
+                        &lt link rel="stylesheet" type="text/css" <mark>media="screen"</mark> href="style.css" &gt
+                    </div>
+                    如下：使用@media，當媒體類型為print 或 screen時，套用內部內容
+                    <div style="color: rgb(239, 244, 245); background-color: grey; padding: 1rem;margin-bottom: 1rem;">
+                        @meida print, screen{<br>
+                        &nbsp;    body {font-size: 12px;)<br>
+                        }
+                    </div>
+                    如下：使用@import，當媒體類型為print時，套用style.css
+                    <div style="color: rgb(239, 244, 245); background-color: grey; padding: 1rem;margin-bottom: 1rem;">
+                        @import url("style.css") print;
+                    </div>
+                    <li>使用Queries (條件) : and(單一或同時符合)、and ,(或)、not、only<br><br>
+                        如下：
+                        <div style="color: rgb(239, 244, 245); background-color: grey; padding: 1rem;margin-bottom: 1rem;">
+                            @media only screen and (min-width: 768px){
+                                CSS
+                            }
+                        </div>
+                        <ul>
+                            <li>max-width: == 這個數字以下（包含） 的適用</li>
+                            <li>min-width == 這個數字以上（包含） 的適用</li>
+                        </ul>
+                    </li>
+                    <li></li>
+                </ul>
+
+            </section>
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <a href="#">TOP</a>
+        <a href="../CSS/cssContents.html">BACK</a>
+</footer>
+<a href="#">
+    <div class="topcircle gotopP">
+    </div>
+    <div class="gotopP"><img src="/daliyNote/img/32213.png" alt="" class="gotoparrow"></div>
+</a>
+</body>
+
+</html>

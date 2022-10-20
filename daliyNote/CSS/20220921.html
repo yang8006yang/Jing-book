@@ -74,7 +74,7 @@
 <body>
     <nav id="nav">
         <div>
-            <a class="nav-left" href="../index.html"><img src="/daliyNote/img/logomy.png" alt=""  class="logomy">JING HAN</a>
+            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt=""  class="logomy">JING HAN</a>
             <span class="navlist">2022/09/21 ~ NOW </span>
         </div>
     </nav>
@@ -164,15 +164,15 @@
                         <table border="1px" width="800px">
                             <tr>
                                 <td>E[href^="http"]{}</td>
-                                <td>選擇[href屬性質是以http開頭]的E元素</td>
+                                <td>選擇[href屬性值是以http開頭]的E元素</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
+                                <td>E[href$="http"]{}</td>
+                                <td>選擇[href屬性值是以http結尾]的E元素</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td></td>
+                                <td>E[href*="http"]{}</td>
+                                <td>選擇[href屬性值包含http的E元素</td>
                             </tr>
                         </table>
                     </li>
@@ -182,6 +182,7 @@
                         *如果有從外面copy css，自己寫的放下面(會覆蓋)<br>
                         * ID > Class (當重複時ID優先)
                     </mark></p>
+                <p>*還可以用<a href="./20221005.html#pseudo">Pseudo</a></p>
             </section>
             <section>
                 <h3 id="background">Background</h3>
@@ -292,6 +293,7 @@
         </main>
     </div>
     <footer>
+        <hr>
         <a href="#">
             <div class="topcircle gotopP">
             </div>
