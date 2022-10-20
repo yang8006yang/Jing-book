@@ -59,22 +59,32 @@ a{
     top: 0;
     width: 100%;
     font-size: 1.25rem;
-    line-height: 1.75rem;
-    padding:0.6rem 1rem ;
+    /* line-height: 1.7rem; */
+    padding:0.4rem 1rem ;
     margin-left: -1rem;
     border-bottom: 2px outset rgb(0, 0, 0 ,0.2);
     background-color: whitesmoke;
 }
+.logomy{
+    width: 50px;
+    margin-left: 5rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+}
+
 #header{
     float: left;
     width: 50%;
     text-align: center;
-    margin-top: 18rem;
+    position: relative;
+    top: 250px;
 }
 #main{
     float: left;
     margin-left: 50px;
-    margin-top: 200px;
+    position: relative;
+    top: 150px;
 }
 #footer{
     clear: both;
@@ -89,11 +99,15 @@ a{
     /* font-family: 'Times New Roman', Times, serif; */
     font-weight: bolder;
     text-decoration: none;
-    margin-left: 5rem;
+    position: relative;
+    top: -0.5rem;
+    
 }
 .navlist{
     float: right;
+    font-weight: bolder;
     margin-right: 5rem;
+    margin-top: 0.75rem;
 }
 .vl{
     height:85vh;
