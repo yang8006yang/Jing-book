@@ -58,15 +58,104 @@
             <section>
             <h3 id="git">GIT</h3>
             <hr>
+            專案管理的東東，有多元宇宙的Fu
+            <ul>
+                <li>安裝
+                </li>
+                <p>安裝完在cwd輸入 git -v，如有看到版本則成功</p>
+                <li>常用指令</li>
+                <table border=2px style="border-collapse: collapse;">
+                    <tr>
+                        <td>git 指令 -h</td>
+                        <td>查指令</td>
+                    </tr>
+                    <tr>
+                        <td>指令</td>
+                        <td>說明</td>
+                    </tr>
+                    <tr>
+                        <td>git init</td>
+                        <td>初始化 (把該資料夾變成git的地盤)<br>
+                        *只吃最外層的.git，外面init過在裡面再設一次沒用</td>
+                    </tr>
+                    <tr>
+                        <td>git add .</td>
+                        <td>加到追蹤 ( . = 全部)</td>
+                    </tr>
+                    <tr>
+                        <td>git commit (-m '文字')</td>
+                        <td>寫自己做了甚麼事、註解</td>
+                    </tr>
+                    <tr>
+                        <td>git rm 檔名</td>
+                        <td>刪除檔案</td>
+                    </tr>
+                    <tr>
+                        <td>git status</td>
+                        <td>知道git的狀況</td>
+                    </tr>
+                    <tr>
+                        <td>git log </td>
+                        <td>查看版本紀錄</td>
+                    </tr>
+                    <tr>
+                        <td>git congig --global user.name/email 名字/信箱</td>
+                        <td>設定用戶名稱/電子郵件</td>
+                    </tr>
+                    <tr>
+                        <td>git checkout 代碼至少前5碼</td>
+                        <td>切換所在位置</td>
+                    </tr>
+                    <tr>
+                        <td>git log --graph --all</td>
+                        <td>看所有的分支圖</td>
+                    </tr>
+                    <tr>
+                        <td>git reflog</td>
+                        <td>看前面都做了什麼動作</td>
+                    </tr>
+                    <tr>
+                        <td>git branch</td>
+                        <td>看自己在哪個分支</td>
+                    </tr>
+                    <tr>
+                        <td>git branch 名字</td>
+                        <td>增加分支</td>
+                    </tr>
+                    <tr>
+                        <td>git switch 名字</td>
+                        <td>移動到該分支</td>
+                    </tr>
+                    <tr>
+                        <td>git switch -c 名字</td>
+                        <td>增加分支</td>
+                    </tr>
+                    <tr>
+                        <td>git merge 被合併的分支名字(A)</td>
+                        <td>合併分支(所再分支與A合併)</td>
+                    </tr>
+                    <tr>
+                        <td>git diff</td>
+                        <td>比較差異(add前後)</td>
+                    </tr>
+                    <tr>
+                        <td>git rebase (-i)</td>
+                        <td>1.commit 想改 2.接枝</td>
+                    </tr>
+                </table>  
+            </ul>
             </section>
             <section>
                 <h3 id="github">Push To Github </h3>
                 <hr>
-                <ul style="background-color: lightgray; height: 8rem;">
-                    <li>git pull 遠端節點名稱 遠端分支名稱 - 把專案從遠端的倉庫拉回來
+                <ul style="background-color: lightgray; height: 7.5rem;">
+                    <br>
+                    <li>
+                        git pull 遠端節點名稱 遠端分支名稱 - 把專案從遠端的倉庫拉回來
                     </li>
                     <li>git push 遠端節點名稱 本地分支名稱 - 把專案推送到遠端的倉庫去
                     </li>
+                    <li>git clone 網址 - 把遠端的專案複製下來(已init好了)</li>
                 </ul>
                 <ul>
                     <li>
