@@ -193,7 +193,41 @@ footer{
 tr:nth-child(even){
     background-color: rgb(235, 232, 232);
 }
+#mobilehr{
+    display: none; 
+}
 
-@media only screen and (max-width){
+@media only screen and (max-width: 720px){
+    .nav-left{
+        font-weight: bolder;
+        text-decoration: none;
+        
+    }
+    .navlist{
+        display: none;
+        
+    
+    }
+    #line{
+        display: none;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #header{
+        flex: 500px;
+        height: 700px;
 
+    }
+    #main{
+        flex: 500px;
+        height: 800px;
+    }
+    #mobilehr{
+        display: block;
+        width: 200px; 
+    }
 }
