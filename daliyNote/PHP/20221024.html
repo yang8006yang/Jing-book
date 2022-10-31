@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +9,56 @@
     <link rel="stylesheet" href="../class/stylesheet.css">
 
 </head>
+
 <body>
     <div class="container">
-    <nav id="nav">
-        <div>
-            <a class="nav-left" href="./index.html"><img src="../img/logomy.png" alt=""  class="logomy">JING HAN</a>
-            <span class="navlist">2022/09/21 ~ NOW </span>
-        </div>
-    </nav>
-    <aside>
-        <div class="list">
+        <nav id="nav">
+            <div>
+                <a class="nav-left" href="/daliyNote/index.html"><img src="../img/logomy.png" alt="" class="logomy">JING HAN</a>
+                <span class="navlist">2022/09/21 ~ NOW </span>
+            </div>
+        </nav>
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#get">網頁傳值(GET/POST)</a></li>
+                    <li><a href="#cs">網頁狀態管理(Cookie/Session)</a></li>
+
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <h3 id="get">網頁傳值(GET/POST)</h3>
             <ul>
-                <li><a href="#get">網頁傳值(GET/POST)</a></li>
+                <li>GET : </li>
+                <p>明碼(資料會顯示在網址上)、可直接放在網址中傳遞(query string)</p>
+                <li>POST : </li>
+                <p>編碼傳輸資料不會顯示在網址上、資料較長、透過<mark>表單</mark>方式傳送資料</p>
+                <li>會員登入範例：
+                    <script src="https://gist.github.com/yang8006yang/ece421775547ddd4efa9d5e961240dda.js"></script>
+                </li>
 
             </ul>
-        </div>
-    </aside>
-    <main>
-        <h3 id="get">網頁傳值(GET/POST)</h3>
-        <ul>
-            <li>GET : </li>
-            <p>明碼(資料會顯示在網址上)、可直接放在網址中傳遞(query string)</p>
-            <li>POST : </li>
-            <p>編碼傳輸資料不會顯示在網址上、資料較長、可透過表單方式傳送資料</p>
+            <h3 id="cs">網頁狀態管理(Cookie/Session)</h3>
+            <ul>
+                <li>Cookie : </li>
+                <p>將資料存在<mark>客戶端</mark>，餅乾會過期</p>
+                <li>Session : </li>
+                <p>將資料存在<mark>伺服器</mark></p>
 
-            <li>會員登入範例：
-                <script src="https://gist.github.com/yang8006yang/ece421775547ddd4efa9d5e961240dda.js"></script></li>
-        </ul>
-    </main>
+                <li>會員登入範例：
+                    <script src="https://gist.github.com/yang8006yang/c7528bf1710a1a140320d9735c9e3798.js"></script>
+                    <script src="https://gist.github.com/yang8006yang/58949b1d0e59cbd4b34cb361619f6016.js"></script>
+                </li>
+                <li>登入後會員中心：
+                    <script src="https://gist.github.com/yang8006yang/e3fa916372c437a338f6118948c4ac49.js"></script>
+                </li>
+                <li>登出：
+                    <script src="https://gist.github.com/yang8006yang/0385ff20a7302d4dd3deec6793aa83f2.js"></script>
+                </li>
+            </ul>
+        </main>
     </div>
 </body>
+
 </html>
