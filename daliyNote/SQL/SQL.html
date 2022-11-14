@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB & SQL</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt="" class="logomy">JING
+                HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="container">
+
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#intro">INTRO</a></li>
+                    <li><a href="#start">Start up</a></li>
+                    <li><a href="#syntax">SQL syntax</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h3 id="intro">Introduction</h3>
+                <hr>
+                <mark>Database(資料庫) != DBMS(資料庫管理系統)</mark>
+                <p>
+                    DBMS是用來操作和管理資料庫的軟體
+                </p>
+                <ul>
+                    <li>Creat /Defining ：新增 指明資料結構、類型、限制</li>
+                    <li>Consturcting ：建立 輸入並儲存</li>
+                    <li>Read +Update +Delete/Manipulating： 讀取、查詢、更新、刪除 </li>
+                    <li>Sharing ： 多個使用者同時存取</li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="start">Start up</h3>
+                <p style="line-height: 0.2rem;">使用phpmyadmin為例</p>
+                <hr>
+                <br>
+                <ul>
+                    <li>Step.1 : 建立資料庫</li>
+                    <p>左側欄 按桶子新增資料庫 > 編碼選 [utf_general]系列 (萬國碼)</p>
+                    <li>Step.2 : 建立資料表</li>
+                    <p>2.1 認識資料型態</p>
+                    <table  border="1px" width="90% ;">
+                        <tr>
+                            <td colspan="3"> 一些常用的</td>
+                        </tr>
+                        <tr>
+                            <td>種類</td>
+                            <td>資料型態</td>
+                            <td>說明</td>
+                        </tr>
+                        <tr>
+                            <td>整數</td>
+                            <td>INT</td>
+                            <td>4byte</td>
+                        </tr>
+                        <tr>
+                            <td>整數</td>
+                            <td>TINYINT</td>
+                            <td>1byte
+                                <br>
+                                數字很小 或 需要使用布林值可用
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>實數 (小數點)</td>
+                            <td>FLOAT</td>
+                            <td>p 小於等於 24</td>
+                        </tr>
+                        <tr>
+                            <td>日期</td>
+                            <td>DATE</td>
+                            <td>格式 YYYY-MM-DD</td>
+                        </tr>
+                        <tr>
+                            <td>日期時間</td>
+                            <td>TIMESTAMP</td>
+                            <td>格式 YYYY-MM-DD HH:MM:SS</td>
+                        </tr>
+                        <tr>
+                            <td>字串</td>
+                            <td>VARCHAR</td>
+                            <td>可變字串長度</td>
+                        </tr>
+                        <tr>
+                            <td>字串</td>
+                            <td>CHAR</td>
+                            <td>固定字串長度</td>
+                        </tr>
+                        <tr>
+                            <td>布林值</td>
+                            <td>BOOLEAN</td>
+                            <td>false = 0</td>
+                        </tr>
+                    </table>
+                    <p>2.2 輸入名稱、類型...ect.</p>
+                    <table border="1px" width="90% ;">
+                        <tr>
+                            <td colspan="2">一些事項</td>
+                        </tr>
+                        <tr>
+                            <td>資料表命名</td>
+                            <td>用複數+底線 ex. high_school_students</td>
+                        </tr>
+                        <tr>
+                            <td>PRIMARY 主鍵</td>
+                            <td>資料不會重複的欄位，以做為不同資料表間關聯欄位<br>
+                            *設主見才有edit bar</td>
+                        </tr>
+                        <tr>
+                            <td>A I</td>
+                            <td>auto increment</td>
+                        </tr>
+                    </table>
+                    <mark>關聯資料表 : 透過相同的欄位將不同的表關聯(一對一、一對多、多對多)</mark>
+                    <li>Step.3 : 新增資料</li>
+                    <p>透過點選新增或SQL語法新增</p>
+                </ul>
+            </section>
+            <section>
+                <h3 id="syntax">SQL syntax</h3>
+                <hr>
+
+                <table border="1px" width="90% ;">
+                    <tr>
+                        <td colspan="3"> 一些常用的</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <a href="#">TOP</a>
+        <a href="../CSS/cssContents.html">BACK</a>
+</footer>
+<a href="#">
+    <div class="topcircle gotopP">
+    </div>
+    <div class="gotopP"><img src="/daliyNote/img/32213.png" alt="" class="gotoparrow"></div>
+</a>
+</body>
+
+</html>
