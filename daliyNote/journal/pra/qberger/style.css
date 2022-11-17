@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bur3d {
+    width: 100%;
+    height: 900px;
+
+}
+
+.about {
+    font-size: 78px;
+    opacity: 0.3;
+
+
+}
+
+.postwall {
+    background-image: url(./img/444.jpg);
+    background-size: cover;
+}
+
+.post:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    box-shadow: 10px 5px 5px black;
+}
+
+.post {
+    position: relative;
+}
+
+.post+p {
+    opacity: 0;
+    position: relative;
+    top: -200px;
+    left: 10px;
+    background-color: rgb(74, 74, 74,0.5);
+}
+
+.post:hover+p {
+    opacity: 1;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navlogo {
+        display: none;
+    }
+
+    .about {
+        writing-mode: vertical-rl;
+        position: absolute;
+        left: 150px;
+    }
+
+    .postwall {
+        height: 1500px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .bur3d {
+        height: 900px;
+    }
+
+    .navlogomo {
+        display: none;
+    }
+
+    .navlogo {
+        padding-left: 20px;
+    }
+
+    .about {
+        font-size: 108px;
+    }
+
+    .postwall {
+        height: 700px;
+    }
+
+}
