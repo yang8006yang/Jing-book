@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>JS Basic</title>
     <link rel="stylesheet" href="../class/stylesheet.css">
 </head>
+
 <body>
     <nav id="nav">
         <div>
-            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt=""  class="logomy">JING HAN</a>
+            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt="" class="logomy">JING HAN</a>
             <span class="navlist">2022/09/21 ~ NOW </span>
         </div>
     </nav>
@@ -20,6 +22,9 @@
                 <ul>
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#var">變數</a></li>
+                    <li><a href="#type">資料型態</a></li>
+                    <li><a href="#opeator">運算子</a></li>
+                    <li><a href="#flow">邏輯判斷式</a></li>
                 </ul>
             </div>
         </aside>
@@ -36,19 +41,186 @@
             </section>
             <section>
                 <h3 id="var">變數</h3>
+                宣告變數與其Scope<br>
                 <ul>
-                    <li>宣告變數
-                        <ul>
-                            <li>var : 看宣告位置決定是全域或區塊。(在function外宣告是全域)</li>
-                            <li>let : 區塊變數</li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                    <li>var : 看宣告位置決定是全域或區塊。(在function外宣告是全域)</li>
+                    <li>let : 區塊變數，以{}區分，在同一{}內無法同名重複宣告</li>
+                    <li>const : 常數，其他同let</li>
+                    <li>沒有以上直接賦值 : 全域變數 (小心使用)</li>
+                </ul>
+                <mark>全域變數=>window(全域物件)的屬性</mark>
+                <h3 id="type">資料型態</h3>
+                <mark>JS是個"弱型別"的語言</mark>
+                <br>
+                <br>
+                <ul>
+                    <li>數值Number : 可以是整數或浮點數</li>
+                    <p style="line-height: 0.2rem;">強制取小數點位數函式：(變數).toFixed(指定位數) </p>
+                    <li>字串String</li>
+                    <li>布林Boolean</li>
+                    <li>Undefined : 尚未被賦值</li>
+                    <li>Null : 空值</li>
+                    <li>Object : 上述以外的 ex.Array、Date</li>
+                    <li>Symbol</li>
+
+                    <table border="1px" width="90%">
+                        <tr>
+                            <td colspan="3"> 常用轉換型別的函數</td>
+                        </tr>
+                        <tr>
+                            <td>parselnt()</td>
+                            <td>將字串轉為整數</td>
+                            <td>從最左邊開始轉換，無法轉換則回傳NaN</td>
+                        </tr>
+                        <tr>
+                            <td>parseFloat()</td>
+                            <td>將字串轉為浮點數</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Number()</td>
+                            <td>將字串/物件轉為數值</td>
+                            <td>無法轉換則回傳NaN</td>
+                        </tr>
+                        <tr>
+                            <td>typeof</td>
+                            <td>傳回資料型別</td>
+                            <td>typeof(XX) / typeof XX</td>
+                        </tr>
+                    </table>
+
+                </ul>
+            </section>
+            <section>
+                <h3 id="opeator">運算子</h3>
+                <ul>
+
+                    <table border="1px" width="90%">
+                        <tr>
+                            <td>指定運算子</td>
+                            <td>= += -= *= /= %=</td>
+                            <td>a+=3; (a=a+3)</td>
+                        </tr>
+                        <tr>
+                            <td>算數運算子</td>
+                            <td>+ - * / % ++ --</td>
+                            <td>加減乘除餘數</td>
+                        </tr>
+                        <tr>
+                            <td>字串運算子</td>
+                            <td>+</td>
+                            <td>組合字串</td>
+                        </tr>
+                        <tr>
+                            <td>布林運算式</td>
+                            <td>&&</td>
+                            <td>(x > 10)&&(y > 15) => ture/false</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"> 0、""、false、null、undefined、NaN 都是 false</td>
+                        </tr>
+                        <tr>
+                            <td>比較運算子</td>
+                            <td>== != > >= < <=</td>
+                            <td>=== 是完全相等(資料型態也要相同)</td>
+                        </tr>
+                        <tr>
+                            <td>邏輯運算子</td>
+                            <td>&& || !</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>a++ v.s. ++a</td>
+                            <td>a++ : 做運算/賦值完在加</td>
+                            <td>++a : 先加在做運算/賦值</td>
+                        </tr>
+                    </table>
+                </ul>
+            </section>
+            <section>
+                <h3 id="flow">流程控制-邏輯判斷式</h3>
+                <ul>
+                    <li>if(...){}else{}</li>
+                    <li>三元運算子：條件式?成立時:不成立時</li>
+                    <li>switch...case</li>
+                    <pre style="color: rgb(239, 244, 245); background-color: grey; padding: 1rem;margin-bottom: 1rem;">
+switch(變數/運算式){
+    case A:
+    程式敘述;
+    break;
+    case B:
+    程式敘述;
+    break;
+    .
+    .
+    .
+    default:
+    程式敘述;
+}
+                    </pre>
+                    <li>短路求值 : 
+                        <p class="smallP">
+                            短路求值是一種邏輯運算子的求值策略。只有當第一個運算數的值無法確定邏輯運算的結果時，才對第二個運算數進行求值。(form wiki)
+                        </p>
+                        <table>
+                            <tr>
+                                <td>||</td>
+                                <td>回傳第一個 Boolean() 判斷是 true 的值</td>
+                            </tr>
+                            <tr>
+                                <td>&&</td>
+                                <td>回傳第一個 Boolean() 判斷是 false 的值，都是ture回傳最後一個</td>
+                            </tr>
+                            <tr>
+                                <td>??</td>
+                                <td> (空值合併運算子)回傳第一個非 null 和非 undefined 的值，都沒有回傳最後一個</td>
+                            </tr>
+                        </table>
                     </li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="loop">流程控制-迴圈</h3>
+                <ul>
+                    <li>for(宣告變數 ; 執行條件 ; 變數增減值){...}</li>
+                    <pre class="codePre">
+for(let i=0; i&gt10; i++) {
+	document.write(i);
+}</pre>
+                    <li>for...in</li>
+                    <pre class="codePre">
+for(let x in array) {
+    console.log(array[x]);
+}</pre>
+x是自訂的變數，對應array的key
+                    <li>forecch</li>
+                    <pre class="codePre">
+物件.forEach(參數 => {
+    程式敘述
+})</pre>
+                    <li>for...of</li>
+                    <hr>
+                    <li>while(執行條件){...}</li>
+                    <li>do{...}while(執行條件)</li>
+                    <p>差異在執行程式的先後</p>
+                    <hr>
+                    <li>break : 強迫終止迴圈執行</li>
+                    <li>continue : 馬上回到迴圈一開始再執行</li>
                 </ul>
 
             </section>
         </main>
     </div>
+    <footer>
+        <hr>
+        <a href="#">TOP</a>
+        <a href="../CSS/cssContents.html">BACK</a>
+    </footer>
+    <a href="#">
+        <div class="topcircle gotopP">
+        </div>
+        <div class="gotopP"><img src="/daliyNote/img/32213.png" alt="" class="gotoparrow"></div>
+    </a>
 </body>
+
 </html>
