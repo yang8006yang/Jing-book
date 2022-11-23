@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Basic</title>
+    <title>JS Basic</title> 
     <link rel="stylesheet" href="../class/stylesheet.css">
+
 </head>
 
 <body>
@@ -14,9 +15,10 @@
         <div>
             <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt="" class="logomy">JING HAN</a>
             <span class="navlist">2022/09/21 ~ NOW </span>
+            <button class="navMore" id="navMore">=</button>
         </div>
     </nav>
-    <div class="container">
+    <div class="mycontainer">
         <aside>
             <div class="list">
                 <ul>
@@ -25,6 +27,8 @@
                     <li><a href="#type">資料型態</a></li>
                     <li><a href="#opeator">運算子</a></li>
                     <li><a href="#flow">邏輯判斷式</a></li>
+                    <li><a href="#loop">迴圈</a></li>
+                    <li><a href="#array">陣列</a></li>
                 </ul>
             </div>
         </aside>
@@ -37,6 +41,9 @@
                     <li>偵測使用者行為(點擊、滾動...)</li>
                     <li>要包在 script tag 內</li>
                     <li>大小寫有差</li>
+                    <li>
+                        <a href="https://github.com/AllJointTW/clean-code-javascript">乾淨的JS Code怎麼寫</a>
+                    </li>
                 </ul>
             </section>
             <section>
@@ -46,9 +53,55 @@
                     <li>var : 看宣告位置決定是全域或區塊。(在function外宣告是全域)</li>
                     <li>let : 區塊變數，以{}區分，在同一{}內無法同名重複宣告</li>
                     <li>const : 常數，其他同let</li>
-                    <li>沒有以上直接賦值 : 全域變數 (小心使用)</li>
+                    <li>沒有以上直接賦值 : 全域屬性 (小心使用)</li>
+                    <mark>全域變數=>window(全域物件)的屬性</mark>
+                    <br>
+                    <li>
+                        差異
+                        <table style="text-align: center;">
+                            <tr>
+                                <td></td>
+                                <td>var</td>
+                                <td>let</td>
+                                <td>const</td>
+                            </tr>
+                            <tr>
+                                <td>scope作用域</td>
+                                <td>在function上，var還能在外層取到值</td>
+                                <td>在block上{}，作用域只存在{}內</td>
+                                <td>在block上{}</td>
+                            </tr>
+                            <tr>
+                                <td>全域</td>
+                                <td>O (會在window上)</td>
+                                <td>X</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <td>重複宣告</td>
+                                <td>O</td>
+                                <td>X</td>
+                                <td>X</td>
+                            </tr>
+                            <tr>
+                                <td>hoisting</td>
+                                <td>在宣告前使用，會hoisting(提升)，得到undefined</td>
+                                <td colspan="2">有 hoisting 但有暫時性死區(TDZ)則出現ReferenceError</td>
+                            </tr>
+                        </table>
+                        <mark>建議變數盡量在scope的最上面宣告完成後再使用</mark>
+                        <br>
+                        <br>
+                        <div class="codePre">
+                            函式也可提升 : 與變數提升的差異在於 變數提升只有宣告被提升，而函式提升是{}內都被提升
+                        </div>
+
+                        <div class="codePre">
+                            let/const 的 TDZ : 如果在宣告變數之前使用變數，這個變數就是存在「暫時死區」中無法存取！
+                        </div>
+                    </li>
                 </ul>
-                <mark>全域變數=>window(全域物件)的屬性</mark>
+
                 <h3 id="type">資料型態</h3>
                 <mark>JS是個"弱型別"的語言</mark>
                 <br>
@@ -68,7 +121,7 @@
                             <td colspan="3"> 常用轉換型別的函數</td>
                         </tr>
                         <tr>
-                            <td>parselnt()</td>
+                            <td>parseInt()</td>
                             <td>將字串轉為整數</td>
                             <td>從最左邊開始轉換，無法轉換則回傳NaN</td>
                         </tr>
@@ -158,7 +211,7 @@ switch(變數/運算式){
     程式敘述;
 }
                     </pre>
-                    <li>短路求值 : 
+                    <li>短路求值 :
                         <p class="smallP">
                             短路求值是一種邏輯運算子的求值策略。只有當第一個運算數的值無法確定邏輯運算的結果時，才對第二個運算數進行求值。(form wiki)
                         </p>
@@ -192,7 +245,7 @@ for(let i=0; i&gt10; i++) {
 for(let x in array) {
     console.log(array[x]);
 }</pre>
-x是自訂的變數，對應array的key
+                    x是自訂的變數，對應array的key
                     <li>forecch</li>
                     <pre class="codePre">
 物件.forEach(參數 => {
@@ -209,6 +262,76 @@ x是自訂的變數，對應array的key
                 </ul>
 
             </section>
+            <section>
+                <h3 id="array">Array 陣列</h3>
+                <p>JavaScript 的陣列有兩種，一種是 [] 包起來的 Array，另一種是 {} 包起來的 物件</p>
+                <ul>
+                    <li>Array宣告方式</li>
+                    <div class="codePre">var arrayName = new Array("V1","V2");</div>
+                    <div class="codePre">var arrayName = new Array();<br>
+                        arrayName[0]="value1";<br>
+                        arrayName[1]="value2";
+                    </div>
+                    <div class="codePre">var arrayName = ["V1","V2"]</div>
+                    <li>取陣列的值</li>
+                    <div class="codePre">array[key];</div>
+                    <p>用foreach把全部取出:</p>
+                    <div class="codePre">array.forEach(function(itme, i){<br>
+                        console.log(item,i);<br>
+                        });</div>
+                    
+                    <li>陣列的屬性</li>
+                    <div class="codePre">array.property (ex. length)</div>
+
+                    <li>陣列的方法</li>
+                    <div class="codePre">array.method() </div>
+                    <table>
+                        <tr>
+                            <td colspan="2" class="tdHeader">常用的方法</td>
+                        </tr>
+                        <tr style="background-color: lightgoldenrodyellow;">
+                            <td>方法</td>
+                            <td>說明</td>
+                        </tr>
+                        <tr>
+                            <td>sort()</td>
+                            <td>排列陣列元素(小>大)</td>
+                        </tr>
+                        <tr>
+                            <td>reverse()</td>
+                            <td>反轉排列陣列元素(大>小)</td>
+                        </tr>
+                        <tr>
+                            <td>pop()</td>
+                            <td>減去陣列尾端元素</td>
+                        </tr>
+                        <tr>
+                            <td>push()</td>
+                            <td>新增元素到陣列尾端</td>
+                        </tr>
+                        <tr>
+                            <td>shift()</td>
+                            <td>減去陣列第一個元素</td>
+                        </tr>
+                        <tr>
+                            <td>unshift()</td>
+                            <td>新增元素到陣列前端</td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <li>物件宣告方式</li>
+                    <p>資料的型態比較複雜、不是同一系列的話，就會用到JSON物件</p>
+
+                    <pre class="codePre">
+let jname = {
+    name: "名字",
+    age: "20",
+    height: "165"
+} </pre>
+                    <mark>物件無法直接使用.length取長度(使用 Object.keys().length)，他的key是索引(可以用字串，所以不是數字)</mark>
+                </ul>
+            </section>
         </main>
     </div>
     <footer>
@@ -221,6 +344,12 @@ x是自訂的變數，對應array的key
         </div>
         <div class="gotopP"><img src="/daliyNote/img/32213.png" alt="" class="gotoparrow"></div>
     </a>
+
+    <script>
+        function navBtn(){
+
+        };
+    </script>
 </body>
 
 </html>
