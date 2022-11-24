@@ -331,13 +331,28 @@ let jname = {
 } </pre>
                     <mark>物件無法直接使用.length取長度(使用 Object.keys().length)，他的key是索引(可以用字串，所以不是數字)</mark>
                 </ul>
+                <li>解構賦值</li>
+                取陣列或給值的時候方便的縮寫
+                <pre class="codePre">
+let array=[1,2,3,4];
+let [a,b,c]=array;
+console.log(a); //1
+console.log(c); //[3,4]
+
+const object = {a: 1, b:2, c:3, d: 4};
+const {a, b: newValue, ...others} = object;
+console.log(a); // 1
+console.log(newValue); // 2，將 b 重新命名為 newValue
+console.log(others); // {c: 3, d: 4}
+//... others 是其餘元素
+                </pre>
             </section>
         </main>
     </div>
     <footer>
         <hr>
         <a href="#">TOP</a>
-        <a href="../CSS/cssContents.html">BACK</a>
+        <a href="./JSontents.html">BACK</a>
     </footer>
     <a href="#">
         <div class="topcircle gotopP">
