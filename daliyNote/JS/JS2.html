@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lv.2</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt="" class="logomy">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+            <button class="navMore" id="navMore">=</button>
+        </div>
+    </nav>
+    <div class="mycontainer">
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#bom">BOM</a></li>
+                    <li><a href="#dom">DOM</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <section>
+                <h3 id="bom">BOM</h3>
+                <p>Browser Object Model</p>
+                <pre>
+                       window
+    ______________________|________________________
+    |        |        |       |          |        |
+document  history  screen  navigator  location  popup
+                </pre>
+                <p>*navigator : 使用者資訊</p>
+            </section>
+            <section>
+                <h3 id="dom">DOM</h3>
+                <p>Window Object Model</p>
+                <pre>
+                     window
+                       |
+                    document
+            ___________|_____________
+            |                       |
+          head                     body
+     _______|______         ________|________
+     |            |         |               |
+    title       meta       h1              div
+                                            |
+                                            p</pre>
+                <div>
+                    *document 是 window下的document
+                </div>
+                <ul>
+                    <li>取得元素
+                        <table>
+                            <tr>
+                                <td colspan="2">const id = document.getElementBy??("??");</td>
+                            </tr>
+                            <tr>
+                                <td>byId</td>
+                                <td>
+                                    抓id相同的
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ByTagName</td>
+                                <td>抓同種標籤，得到會是陣列</td>
+                            </tr>
+                            <tr>
+                                <td>ByClassName</td>
+                                <td>抓同種class的元素，得到會是陣列 ('a b')=>抓class為a和b的
+                            </tr>
+                            <tr>
+                                <td>id.parentElement</td>
+                                <td>抓取上一層元素</td>
+                            </tr>
+                            <tr>
+                                <td>id.children</td>
+                                <td>抓取下一層所有元素</td>
+                            </tr>
+                            <tr>
+                                <td>id.first/lastChild</td>
+                                <td>可以抓取下一層第一個/最後一個元素</td>
+                            </tr>
+                            <tr>
+                                <td>previous/nextElementSibling</td>
+                                <td>可以抓取同一層的上/下一個元素</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">const id = document.querySelector(".myClass"); :第一個符合的</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">const id = document.querySelectorAll("#myId"); : 全部 結果是陣列</td>
+                            </tr>
+                        </table>
+                        <p>*可結合使用 ex. document.getElementByTagName("h1").getElementByClassName("class")<br>
+                            =>取所有h1標籤裡class是class的元素
+                        </p>
+
+                    </li>
+
+                    <li>修改元素</li>
+                    <ul>
+                        <li>取得屬性名
+                            <table>
+                                <tr>
+                                    <td>文字</td>
+                                    <td>.textContent .innerHTML .innerText</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>.style.backgroundColor (改駝峰命名)</td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li>修改屬性 : .setAttribute('href','www.google.com')</li>
+                        <li>取得屬性 : .getAttribute("href");</li>
+                        <li>CLASS
+                            <table>
+
+                                <tr>
+                                    <td>取得class
+                                    <td>.className</td>
+                                </tr>
+
+                                <tr>
+                                    <td>新增class</td>
+                                    <td>.classList.add()</td>
+                                </tr>
+                                <tr>
+                                    <td>刪除class</td>
+                                    <td>.classList.remove()</td>
+                                </tr>
+                                <tr>
+                                    <td>取代class</td>
+                                    <td>.classList.replace()</td>
+                                </tr>
+                                <tr>
+                                    <td>關閉class</td>
+                                    <td>.classList.toggle()</td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+            <section>
+                
+            </section>
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <a href="#">TOP</a>
+        <a href="./JSontents.html">BACK</a>
+    </footer>
+    <a href="#">
+        <div class="topcircle gotopP">
+        </div>
+        <div class="gotopP"><img src="../img/32213.png" alt="" class="gotoparrow"></div>
+    </a>
+</body>
+
+</html>

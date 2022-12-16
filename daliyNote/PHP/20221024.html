@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PHP 網頁傳值與狀態</title>
     <link rel="stylesheet" href="../class/stylesheet.css">
 
 </head>
@@ -14,7 +14,8 @@
     <div class="mycontainer">
         <nav id="nav">
             <div>
-                <a class="nav-left" href="/daliyNote/index.html"><img src="../img/logomy.png" alt="" class="logomy">JING HAN</a>
+                <a class="nav-left" href="/daliyNote/index.html"><img src="../img/logomy.png" alt="" class="logomy">JING
+                    HAN</a>
                 <span class="navlist">2022/09/21 ~ NOW </span>
             </div>
         </nav>
@@ -23,6 +24,7 @@
                 <ul>
                     <li><a href="#get">網頁傳值(GET/POST)</a></li>
                     <li><a href="#cs">網頁狀態管理(Cookie/Session)</a></li>
+                    <li><a href="#oop">物件導向</a></li>
 
                 </ul>
             </div>
@@ -57,13 +59,64 @@
                     <script src="https://gist.github.com/yang8006yang/0385ff20a7302d4dd3deec6793aa83f2.js"></script>
                 </li>
             </ul>
+            <h3 id="oop">物件導向</h3>
+            <p>以物件為主的程式開發設計方法</p>
+            <ul>
+                <li>認識OOP
+                    <pre>
+        ex.人  「Class」->屬性 : 眼睛顏色、頭髮樣式...
+                   |   ->方法 : 走路方式、語調
+    _______________|_______________
+    |              |              |  
+  John           Amy            Mary ->物件實體
+
+</pre>
+                    <p>宣告範例 :</p>
+                    <pre class="codePre">
+Class People{
+    public $eye='green';
+    protected $hair_style="qqhair";
+
+
+    public function __construct($var)
+    {
+        //公開行為內容
+        //建構式內容
+        // new建構時就執行
+    }
+    private function getEye(){
+        return $this->eye;
+        // this 指的是當下的Peopel物件 (ex.$John...)
+        //私有行為內容
+    }
+}
+
+$John=new People($var) 
+echo $John->eye  //green
+
+</pre>
+                </li>
+                <li>特性
+                    <ul>
+                        <li>封裝(Encapsulation)</li>
+                        <li>繼承(Inheritance)</li>
+                        <li>多型(Polymorphism)</li>
+                    </ul>
+                </li>
+            </ul>
         </main>
     </div>
     <footer>
         <hr>
         <a href="#">TOP</a>
-        <a href="../CSS/cssContents.html">BACK</a>
+        <a href="./phpContents.html">BACK</a>
     </footer>
+    <a href="#">
+        <div class="topcircle gotopP">
+        </div>
+        <div class="gotopP"><img src="../img/32213.png" alt="" class="gotoparrow"></div>
+    </a>
+
 </body>
 
 </html>

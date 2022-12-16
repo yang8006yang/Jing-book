@@ -25,6 +25,7 @@
                     <li><a href="#intro">INTRO</a></li>
                     <li><a href="#start">Start up</a></li>
                     <li><a href="#syntax">SQL syntax</a></li>
+                    <li><a href="#fun">SQL function</a></li>
                 </ul>
             </div>
         </aside>
@@ -133,39 +134,85 @@
             <section>
                 <h3 id="syntax">SQL syntax</h3>
                 <hr>
-
+                <li>`資料表/欄位`</li>
+                <li>'字串/值'</li>
+                <li>句子結束;</li>
                 <table border="1px" width="90% ;">
                     <tr>
-                        <td colspan="3"> 一些常用的</td>
+                        <td colspan="3" style="background-color: lightblue;"> 一些基本的</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>INSERT</td>
+                        <td>新增/加入</td>
+                        <td>INSERT INTO `table`(`col1`,`col2`,...) VALUES('v1,v2,...'); </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>SELECT</td>
+                        <td>查詢</td>
+                        <td>SELECT *(as '取代欄位名字') FROM `table` WHERE 1 (*=全部)</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>UPDATE</td>
+                        <td>更新</td>
+                        <td>UPDATE `table` SET `col1`='value1',`col`='value2'</td>
                     </tr>
                     <tr>
+                        <td>DELETE</td>
+                        <td>刪除</td>
+                        <td>DELETE FROM `table` WHERE...</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="background-color: lightblue;"> 條件句</td>
+                    </tr>
+                    <tr>
+                        <td>WHERE</td>
                         <td></td>
+                        <td>`id`='1' AND `id`=5</td>
+                    </tr>
+                    <tr>
+                        <td>IN</td>
                         <td></td>
+                        <td>WHERE `id` IN('1','5','10');</td>
+                    </tr>
+                    <tr>
+                        <td>BETWEEN</td>
                         <td></td>
+                        <td>SELECT * FROM `table` WHERE `id` >= '5' AND `id` <= '10';</td>
+                    </tr>
+                    <tr>
+                        <td>LIKE</td>
+                        <td>模糊查詢(搭配%)</td>
+                        <td>SELECT * FROM `table` WHERE `id` LIKE "1%"</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="background-color: lightblue;"> 限制句</td>
+                    </tr>
+                    <tr>
+                        <td>ORDER BY</td>
+                        <td>排序 ASC增序(預設) DESC 遞減</td>
+                        <td>SELECT * FROM `table` ORDER BY `id` DESC;</td>
+                    </tr>
+                    <tr>
+                        <td>GROUP BY</td>
+                        <td>群組</td>
+                        <td>SELECT * FROM `table` GROUP BY `area`,`group`;</td>
+                    </tr>
+                    <tr>
+                        <td>LIMIT</td>
+                        <td>限制 (從0開始)</td>
+                        <td>SELECT * FROM `table` LIMIT 10,20;(11筆開始 ,取20筆)</td>
                     </tr>
                 </table>
+            </section>
+            <section>
+                <h3 id="fun">常見函式</h3>
             </section>
         </main>
     </div>
     <footer>
         <hr>
         <a href="#">TOP</a>
-        <a href="../CSS/cssContents.html">BACK</a>
+        <a href="../index.html">BACK</a>
 </footer>
 <a href="#">
     <div class="topcircle gotopP">

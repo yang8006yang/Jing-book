@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP With SQL</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+
+<body>
+
+    <div class="mycontainer">
+        <nav id="nav">
+            <div>
+                <a class="nav-left" href="/daliyNote/index.html"><img src="../img/logomy.png" alt="" class="logomy">JING
+                    HAN</a>
+                <span class="navlist">2022/09/21 ~ NOW </span>
+            </div>
+        </nav>
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#line">連線資料庫</a></li>
+                    <li><a href="#pass">SQL指令傳遞</a></li>
+
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <h3 id="line">連線資料庫</h3>
+            <p>建議透過PDO方式連接</p>
+            <pre class="codePre">
+$dsn="mysql:host=localhost;charset=utf8;dbname=資料庫名字";
+$pdo=new PDO($dsn,'root','');
+//建立一個新的PDO物件('資料庫參數','帳號','密碼','?可不填(附加設定)')</pre>
+            <h3 id="pass">SQL指令傳遞&取值</h3>
+            <p>指令以字串方式建立，傳回會是陣列</p>
+            <pre class="codePre">
+$sql="sql指令";
+$pdo>query($sql)->fetchAll();
+//query=>傳遞 fetch=>取值</pre>
+            <ul>
+                <li>fetch() : 一筆</li>
+                <li>fetchAll() : 取回全部</li>
+                <li>PDO::FETCH_ASSOC : 只回傳帶欄位名稱的資料</li>
+                <li>PDO::FETCH_NUM : 只回傳帶欄位索引的資料</li>
+                <li>$pdo->exec($sql) : 執行，但只返回影響筆數</li>
+                <li>$pdo->query($sql)->fetchColumn($n) : 執行並返回該筆資料中指定欄位的資料，$n為欄位的索引值</li>
+            </ul>
+
+        </main>
+    </div>
+    <footer>
+        <hr>
+        <a href="#">TOP</a>
+        <a href="./phpContents.html">BACK</a>
+    </footer>
+</body>
+
+</html>
