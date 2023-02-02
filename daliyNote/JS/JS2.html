@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Lv.2</title>
     <link rel="stylesheet" href="../class/stylesheet.css">
-
+    <style>
+        .subtitle{
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgb(175, 221, 200);
+            padding: 0.8rem;
+            border-left: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,6 +32,7 @@
                 <ul>
                     <li><a href="#bom">BOM</a></li>
                     <li><a href="#dom">DOM</a></li>
+                    <li><a href="#ajax">AJAX</a></li>
                 </ul>
             </div>
         </aside>
@@ -207,7 +216,143 @@ document  history  screen  navigator  location  popup
                     </tr>
                 </table>
             </section>
-            
+            <section>
+                <h3 id="ajax">AJAX / XML</h3>
+                <ul>
+                    <li>AJAX</li>
+                    <p>Asynchronous JavaScript and XML</p>
+                    <p>一種用於創建高效、可交互的網頁應用程序的技術。Ajax 允許網頁透過 HTTP 請求向伺服器發送資料，並在<mark>不重新載入整個頁面的情況下更新頁面的部分內容</mark>。<br>Ajax 使用 JavaScript 向伺服器發送請求，並使用 XMLHttpRequest 對象接收伺服器的響應。</p>
+                    <li>XML</li>
+                    <p>Extensible Markup Language，可擴展標記語言</p>
+                    <p>是一種文本格式，用於在網際網路上傳輸和存儲資料。<br>要特點是它是可擴展的，即它可以根據用戶的需求自定義新的標記。它也可以與其他標記語言（如 HTML）一起使用。</p>
+                </ul>
+                <p style="float: right;">from : chatGTP</p>
+                <br><br>
+                <p>想使用XHR / AJAX技術有以下方法 :</p>
+                <div class="subtitle">XMLHttpRequest</div>
+                使用 XHR 物件可以在網頁上讀取遠端的 JSON 資料(古早方法)(後來又推出JSON格式，資料量比XML小，解析和應用也較方便，因此近年來的資料傳輸逐漸以JSON來取代XML)
+                <pre class="codePre">
+//宣告物件
+var xhr = new XMLHttpRequest;
+
+//建立設定
+xhr.open(
+    Method, //get,post,put,patch,delete (格式)
+    URL,
+    async //同步與非同步 ture、async(非同步)
+    );
+
+//設置請求表單
+xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded")
+(form 傳統表單輸入)
+//設置請求json
+xhr.setRequestHeader("Content-Type","application/json")
+
+//監聽事件，使回應完成時能回調函式處理回應 (非同步時需要)
+xhr.onload=function(){  
+    var type=xhr.getResponseHeader("Content-Type");
+    var status=xhr.status
+    // 可用xhr.status判斷HTTP連線狀態(ex.200 . 404)
+    var response=xhr.responseText
+    if(xhr.status == 200){
+    document.write(response)
+    }eles{
+    console.log('資料錯誤');
+    }
+}
+
+//執行請求及傳送內容
+//表單資料
+let context="name=john&age=32";
+
+//json資料
+let context=JSON.stringify({name:'john',age:32})
+
+//執行ajax請求
+//有傳送資料或post時
+xhr.send(context);
+
+//只是請求資料時
+xhr.send();
+                </pre>
+                <div class="subtitle">Fetch</div>
+                特色在於使用 Promise 作回應
+<pre class="codePre">
+//執行請求及傳送內容
+//表單資料
+let body="name=john&age=32";
+    
+ //json資料
+let body=JSON.stringify({name:'john',age:32})
+//body 將 json 轉字串送出
+
+fetch('url',{method,body,headers:{'Content-Type':'application/x-www-form-urlencoded'}})
+// method : GET, POST, PUT, DELETE, etc
+// headers{'Content-Type': 'application/json'}:headers 加入 json 格式
+
+    .then((res)=>{
+        // 可以透過 blob(), json(), text(),arrayBuffer(), formData() 轉成可用的資訊
+        //回傳是josn時
+        return response.json()
+    
+        //回傳是text時
+        return response.text()
+    })
+    .then((data)=>{
+        console.log(date);
+    })
+    .catch(function(err){
+        //error
+    })
+</pre>
+<div class="subtitle">JQuery</div>
+<pre class="codePre">
+//$.ajax方法
+$.ajax({
+    type:get/post/patch/delete/update…,
+    url:"http://.....",
+    success: (callback),
+    error: (callback),
+    data:{json/xml/string},
+    complete: (callback)
+})
+
+//$.get方法
+$.get(url,data,callback)
+
+//$.post方法
+$.post(url,data,callback)
+
+//().load()方法
+$(selector).load(url)
+</pre>
+<div class="subtitle">axios</div>
+函式庫相較jQuery小很多，引 : src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+<pre class="codePre">
+    
+axios.get(url)
+.then(function(response){
+
+//處理回應
+console.log(response.data);
+//抓回來的 JSON 資料
+console.log(response.status);
+//回傳的狀態碼
+    
+})
+.catch(function(err){
+//error
+    
+})
+</pre>
+<div class="subtitle">四種常見的 POST 請求 content-type</div>
+<ul>
+    <li>application/x-www-form-urlencoded :form 表單 </li>
+    <li>application/json : json</li>
+    <li>multipart/form-data : 檔案、圖片、影片，搭配enctype 屬性 multipart/form-data </li>
+    <li>text/plain :純文本格式</li>
+</ul>
+            </section>
         </main>
     </div>
     <footer>
