@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# 初學</title>
+    <link rel="stylesheet" href="../class/stylesheet.css">
+</head>
+<body>
+    <nav id="nav">
+        <div>
+            <a class="nav-left" href="../index.html"><img src="../img/logomy.png" alt=""  class="logomy">JING HAN</a>
+            <span class="navlist">2022/09/21 ~ NOW </span>
+        </div>
+    </nav>
+    <div class="mycontainer">
+
+        <aside>
+            <div class="list">
+                <ul>
+                    <li><a href="#dataType">Data Type & Var</a></li>
+                    <li><a href="#string">字串的常見用法</a></li>
+                    <li><a href="#num">數字的常見用法</a></li>
+                    <li><a href="#comment">基礎語法</a></li>
+                    <li><a href="#array">Array</a></li>
+                    <li><a href="#c&o">class & object</a></li>
+                    <li><a href="#mainM">Main Method</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main>
+            <p>System.Console.WriteLine("HELLO C#");</p>
+            <section>
+                <h3 id="dataType">Data Type & Var</h3>
+                <hr>
+                <ul>
+                    <li>string : 字串 "string"</li>
+                    <li>char : 字元'char'</li>
+                    <li>int : 整數 123  </li>
+                    <li>double : 浮點數 123.456</li>
+                    <li>bool : 布林值 true/false</li>
+                </ul>
+                <br>
+                使用變數: 資料型態 變數名稱 = 值;
+                <pre class="codePre">
+string name = "Dory";
+char gender = 'F';
+int age = 20;
+double height = 165.5;
+bool ishumam = false;</pre>
+            </section>
+            <section>
+                <h3 id="string">字串的常見用法</h3>
+                <hr>
+                <table>
+                    <tr>
+                        <td>/n</td>
+                        <td>換行</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>跳脫字元 ex./"</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>連接字串/變數 ex "Apple" + "Banana"</td>
+                    </tr>
+                    <tr>
+                        <td>.length</td>
+                        <td>計算字串長度 ex "string".length</td>
+                    </tr>
+                    <tr>
+                        <td>.ToUpper()/ToLower()</td>
+                        <td>字串轉大寫/小 ex "string".ToUpper()</td>
+                    </tr>
+                    <tr>
+                        <td>.Contains("s")</td>
+                        <td>判斷字串是否包含某字串，回傳bool ex "string"..Contains("s") //回傳true</td>
+                    </tr>
+                    <tr>
+                        <td>string[]</td>
+                        <td>回傳字串內第幾位的字 ex. string[1] //回傳t</td>
+                    </tr>
+                    <tr>
+                        <td>.IndexOf()</td>
+                        <td>尋找值在字串內的位置，若有重複則是最先找到的，若查找字串回傳為開頭位置 ex.string.IndexOf('t') //回傳1</td>
+                    </tr>
+                    <tr>
+                        <td>.Substring()</td>
+                        <td>切割字串 ex.string.Substring(2) //回傳ring  ex.string.Substring(2,2) //回傳ri (從第2位開始，取2個)</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3 id="dataType">數字的常見用法</h3>
+                <hr>
+                <ul>
+                    <li>整數與整數做運算只會回傳整數 ex. 5/2 = 2</li>
+                    <li>有四則運算規則</li>
+                    <li>
+                        <table>
+                        <tr>
+                            <td>System.Math.Abs()</td>
+                            <td>絕對值</td>
+                        </tr>    
+                        <tr>
+                            <td>System.Math.Pow()</td>
+                            <td>次方 ex. System.Math.Pow(2,3) 2的三次方 //8</td>
+                        </tr>
+                        <tr>
+                            <td>System.Math.Sqrt()</td>
+                            <td>開根號</td>
+                        </tr>
+                        <tr>
+                            <td>System.Math.Max()/System.Math.Min()</td>
+                            <td>比大小 ex.System.Math.Max(1,20) //20</td>
+                        </tr>
+                        <tr>
+                            <td>System.Math.Round()</td>
+                            <td>四捨五入</td>
+                        </tr>
+                        </table>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="comment">基礎語法</h3>
+                <hr>
+                <ul>
+                    <li>System.Console.WriteLine(); : 印出一行內容</li>
+                    <li>System.Console.Write(); : 印出內容(不換行)</li>
+                    <li>System.Console.ReadLine(); : 取得用戶輸入</li>
+                    <li>System.Convert.ToInt32(); : 轉為Int</li>
+                    <li>System.Convert.ToDouble(); : 轉為浮點數</li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="array">Array</h3>
+                <hr>
+                <ul>
+                    <li>一維陣列 : 資料型態[] 陣列名稱 = { val1,val2 }</li>    
+                    <li>創建空的一維陣列 : 資料型態[,] 陣列名稱 = new 資料型態[一維陣列內有幾個值]</li>    
+                    <li>一維陣列呼叫 : 陣列名稱[key]</li>    
+                    <li>二維陣列 : 資料型態[,] 陣列名稱 = { { val1,val2 },{ val3,val4 } }</li>    
+                    <li>創建空的二維陣列 : 資料型態[,] 陣列名稱 = new 資料型態[幾個一維陣列,一維陣列內有幾個值]</li>    
+                    <li>二維陣列呼叫 : 陣列名稱[key1,key2]</li>    
+                </ul>
+            </section>
+            <section>
+                <h3 id="c&o">class & object</h3>
+                <hr>
+                <ol>
+                    <li>創建class</li>
+                    在專案上右鍵>加入>新增項目>(顯示範例)>選擇類別>輸入名稱(命名通常第一字大寫)
+                    <img src="../img/c#class1.JPG" alt="">
+                    <li>類別的內容</li>
+                    <pre class="codePre">
+class Car
+{
+    public string color;
+    public int level;
+}
+                    </pre>
+                    <li>創建實體物件</li>
+                    <pre class="codePre">
+Car toyota = new Car();
+toyota.color = "black";
+toyota.level = 2;</pre>
+                <li>其他</li>
+                </ol>
+                <ul>
+                    <li>namespace : 命名空間 ， 一個裡面可以放類別、命名空間...的空間
+                        <br>
+                        使用該空間的東西 1.在程式開頭 using spacename 2.spacename.classname ;
+                    </li>
+                    <li>Method : 
+                        <pre class="codePre">
+public void SayHi()
+{
+Console.WriteLine("HI" + name);
+}</pre>
+<p>void可以是int / bool ，視回傳的資料型態而定 ; ()內可放變數 ex.(int num1, int num2)</p>
+                    </li>
+                    <li>constructor : 創建實體時一起建構 / 執行
+<pre class="codePre">
+public SayHi()
+{
+    Console.WriteLine("創建成功");
+}</pre>
+                    </li>
+                    <li>
+                        Getter & Setter : 當類別內屬性是private，在外部想取得/設定該屬性˙
+<pre class="codePre">
+class D
+{
+    private string type;
+
+    public Constructor()
+    {
+        Type = type;
+    }
+
+    public string Type
+    {
+        get { return type; }
+        set { type = value; }
+    }
+}
+</pre>
+                    <p>可用於限制type屬性設定的內容</p>
+                    </li>
+                    <li>static attribute 靜態屬性 : 屬於class的，取的該屬性 (1.Classname.att / 2.寫個方法回傳)</li>
+                    <li>static class/method : 不需要創建實體即可使用</li>
+                    <li>inheritance 繼承 : 把其他class的東西 讓自己也有，減少重複的程式碼
+<pre class="codePre">
+class ElectricCar : Car{}
+</pre>
+                    </li>
+
+                </ul>
+            </section>
+            <section>
+                <h3 id="mainM">Main Method</h3>
+                <hr>
+                C#的Main method是程式開始執行的進入點
+                <pre class="codePre">
+class Program
+{
+    static void Main()
+    {
+
+    }
+}</pre>
+                
+            </section>                      
+</main>
+</div>
+<footer>
+    <hr>
+    <a href="#">
+        <div class="topcircle gotopP">
+        </div>
+        <div class="gotopP"><img src="../img/32213.png" alt="" class="gotoparrow"></div>
+    </a>
+        <a href="#">TOP</a>
+        <a href="./htmlContents.html">BACK</a>
+    </footer>
+</body>
+</html>
